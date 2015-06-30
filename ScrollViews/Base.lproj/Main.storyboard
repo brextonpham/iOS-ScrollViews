@@ -32,7 +32,7 @@
                                             <segue destination="0X5-Cp-JkB" kind="push" id="HGl-L2-BvI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="cUP-ND-tAf" style="IBUITableViewCellStyleDefault" id="9sr-qt-PB8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cUP-ND-tAf" style="IBUITableViewCellStyleDefault" id="9sr-qt-PB8">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9sr-qt-PB8" id="aLi-HK-YJO">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -45,8 +45,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hEc-wU-Pl9" kind="push" id="75N-73-szX"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PGy-px-Ip8" style="IBUITableViewCellStyleDefault" id="KLd-ld-PPG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PGy-px-Ip8" style="IBUITableViewCellStyleDefault" id="KLd-ld-PPG">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLd-ld-PPG" id="CeC-vE-grc">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -59,6 +62,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yAL-G3-i4y" kind="push" id="vWI-E2-feD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Q6o-TN-Ok7" style="IBUITableViewCellStyleDefault" id="q3V-4F-UT8">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -117,6 +123,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jp-08-jxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1156" y="366"/>
+        </scene>
+        <!--Custom Scroll View Controller-->
+        <scene sceneID="aqb-bL-gsY">
+            <objects>
+                <viewController id="hEc-wU-Pl9" customClass="CustomScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mli-1A-ETa"/>
+                        <viewControllerLayoutGuide type="bottom" id="w7o-10-m4k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Fm-k0-1nz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qmf-JE-o3R">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hEc-wU-Pl9" id="X9M-k3-CP4"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AdQ-v8-SDR"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Qmf-JE-o3R" id="ybv-cd-amE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QU-Ox-S4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="1084"/>
+        </scene>
+        <!--Paged Scroll View Controller-->
+        <scene sceneID="VaX-0r-mUO">
+            <objects>
+                <viewController id="yAL-G3-i4y" customClass="PagedScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gyf-61-ipn"/>
+                        <viewControllerLayoutGuide type="bottom" id="XeO-Ff-4ae"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mVf-1e-FBG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVD-3t-SbM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yAL-G3-i4y" id="cLL-a5-ZHc"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Itz-1M-IXy">
+                                <rect key="frame" x="0.0" y="523" width="320" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XE1-Xz-5fA"/>
+                    <connections>
+                        <outlet property="pageControl" destination="Itz-1M-IXy" id="N1M-dj-J14"/>
+                        <outlet property="scrollView" destination="iVD-3t-SbM" id="b8l-jL-sye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViG-h8-fPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="1763"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fCE-nA-EK8">
