@@ -66,7 +66,7 @@
                                             <segue destination="yAL-G3-i4y" kind="push" id="vWI-E2-feD"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Q6o-TN-Ok7" style="IBUITableViewCellStyleDefault" id="q3V-4F-UT8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Q6o-TN-Ok7" style="IBUITableViewCellStyleDefault" id="q3V-4F-UT8">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q3V-4F-UT8" id="aj9-9e-hie">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -79,6 +79,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ke9-Wb-o7s" kind="push" id="ZQA-ca-Dop"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -123,6 +126,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jp-08-jxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1156" y="366"/>
+        </scene>
+        <!--Peek Paged Scroll View Controller-->
+        <scene sceneID="esd-85-kzN">
+            <objects>
+                <viewController id="ke9-Wb-o7s" customClass="PeekPagedScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0W2-3e-GGV"/>
+                        <viewControllerLayoutGuide type="bottom" id="pqv-Pe-ahq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rav-Fr-btq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lCj-bU-Mtf">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                            </pageControl>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F39-uA-JIR">
+                                <rect key="frame" x="40" y="96" width="240" height="375"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ke9-Wb-o7s" id="4Fs-Rm-9jY"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xdG-MP-OAR"/>
+                    <connections>
+                        <outlet property="pageControl" destination="lCj-bU-Mtf" id="eSk-ZH-X0D"/>
+                        <outlet property="scrollView" destination="F39-uA-JIR" id="E2l-9p-rBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uh4-2f-L0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="2395"/>
         </scene>
         <!--Custom Scroll View Controller-->
         <scene sceneID="aqb-bL-gsY">
@@ -186,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViG-h8-fPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="1763"/>
+            <point key="canvasLocation" x="1156" y="1743"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fCE-nA-EK8">
