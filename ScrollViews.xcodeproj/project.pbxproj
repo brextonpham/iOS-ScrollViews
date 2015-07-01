@@ -23,6 +23,7 @@
 		D60A7DC31B4340ED00989AC3 /* CustomScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A7DC21B4340ED00989AC3 /* CustomScrollViewController.m */; };
 		D60A7DC61B43493C00989AC3 /* PagedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A7DC51B43493C00989AC3 /* PagedScrollViewController.m */; };
 		D60A7DC91B4350B500989AC3 /* PeekPagedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A7DC81B4350B500989AC3 /* PeekPagedScrollViewController.m */; };
+		D60A7DCC1B43840000989AC3 /* ScrollViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A7DCB1B43840000989AC3 /* ScrollViewContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		D60A7DC51B43493C00989AC3 /* PagedScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedScrollViewController.m; sourceTree = "<group>"; };
 		D60A7DC71B4350B500989AC3 /* PeekPagedScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeekPagedScrollViewController.h; sourceTree = "<group>"; };
 		D60A7DC81B4350B500989AC3 /* PeekPagedScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeekPagedScrollViewController.m; sourceTree = "<group>"; };
+		D60A7DCA1B43840000989AC3 /* ScrollViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewContainer.h; sourceTree = "<group>"; };
+		D60A7DCB1B43840000989AC3 /* ScrollViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				D60A7DC11B4340ED00989AC3 /* CustomScrollViewController.h */,
 				D60A7DC21B4340ED00989AC3 /* CustomScrollViewController.m */,
 				D60A7D991B43268F00989AC3 /* Main.storyboard */,
+				D60A7DCA1B43840000989AC3 /* ScrollViewContainer.h */,
+				D60A7DCB1B43840000989AC3 /* ScrollViewContainer.m */,
 				D60A7DC41B43493C00989AC3 /* PagedScrollViewController.h */,
 				D60A7DC51B43493C00989AC3 /* PagedScrollViewController.m */,
 				D60A7DC71B4350B500989AC3 /* PeekPagedScrollViewController.h */,
@@ -260,6 +265,7 @@
 			files = (
 				D60A7DC61B43493C00989AC3 /* PagedScrollViewController.m in Sources */,
 				D60A7DC31B4340ED00989AC3 /* CustomScrollViewController.m in Sources */,
+				D60A7DCC1B43840000989AC3 /* ScrollViewContainer.m in Sources */,
 				D60A7D981B43268F00989AC3 /* ViewController.m in Sources */,
 				D60A7D951B43268F00989AC3 /* AppDelegate.m in Sources */,
 				D60A7DC91B4350B500989AC3 /* PeekPagedScrollViewController.m in Sources */,

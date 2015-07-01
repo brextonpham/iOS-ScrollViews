@@ -142,12 +142,21 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lCj-bU-Mtf">
                                 <rect key="frame" x="0.0" y="531" width="320" height="37"/>
                             </pageControl>
-                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F39-uA-JIR">
-                                <rect key="frame" x="40" y="96" width="240" height="375"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4d-cn-J0O" customClass="ScrollViewContainer">
+                                <rect key="frame" x="0.0" y="96" width="320" height="375"/>
+                                <subviews>
+                                    <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F39-uA-JIR">
+                                        <rect key="frame" x="40" y="0.0" width="240" height="375"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ke9-Wb-o7s" id="4Fs-Rm-9jY"/>
+                                        </connections>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="delegate" destination="ke9-Wb-o7s" id="4Fs-Rm-9jY"/>
+                                    <outlet property="scrollView" destination="F39-uA-JIR" id="xJm-Y8-AuI"/>
                                 </connections>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
